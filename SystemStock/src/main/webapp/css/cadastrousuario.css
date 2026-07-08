@@ -1,0 +1,96 @@
+/* Reset básico para garantir que as margens fiquem alinhadas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da tela inteira (o azul escuro) */
+body {
+    background-color: #28648B; /* Azul parecido com o do seu print */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* A caixinha principal (o azul claro) */
+.card-login {
+    background-color: #C1DFF1; /* Azul claro */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombrinha no fundo */
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título */
+.card-login h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #000;
+    font-size: 28px;
+}
+
+/* O formulário em si */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Textos em cima dos campos (Nome, Usuário, Senha) */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+/* As caixinhas de digitar (Inputs) */
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 14px;
+    outline: none; /* Remove a borda preta ao clicar */
+}
+
+/* O botão verde de cadastrar */
+.btn-entrar {
+    background-color: #209E7B; /* Verde do seu botão original */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse no botão verde */
+.btn-entrar:hover {
+    background-color: #187d61; 
+}
+
+/* O texto e link lá embaixo para voltar ao login */
+.texto-cadastro {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.texto-cadastro a {
+    color: #209E7B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto-cadastro a:hover {
+    text-decoration: underline;
+}

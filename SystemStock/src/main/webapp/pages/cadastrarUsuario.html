@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cadastro de Usuário - SystemStock</title>
+
+      <link rel="stylesheet" href="../css/cadastrousuario.css" />
+    </head>
+  </head>
+  <body>
+    <div class="card-login">
+      <h2>Novo Usuário</h2>
+
+      <form
+        action="/api/usuarios/salvar"
+        method="POST"
+        id="formCadastroUsuario"
+      >
+        <label for="nome">Nome Completo</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome"
+          required
+        />
+
+        <label for="usuario">Usuário</label>
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          placeholder="Crie um usuário"
+          required
+        />
+
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="Crie uma senha"
+          required
+        />
+
+        <button type="submit" class="btn-entrar">Cadastrar</button>
+
+        <p class="texto-cadastro">
+          Já tem uma conta? <a href="login.html">Voltar ao Login</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

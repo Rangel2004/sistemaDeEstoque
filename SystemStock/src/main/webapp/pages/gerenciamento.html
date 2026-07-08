@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/color.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/cadastroProduto.css" />
+    <link rel="stylesheet" href="../css/gerenciamento.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="tituloCadastro">SystemStock</h1>
+        <nav id="menu">
+            <ul class="menu-lista">
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="gerenciamento.html">Gerenciamento</a></li>
+                <li><a href="cadastroProduto.html" class="btn-menu">Cadastro</a></li>
+                <li><a href="cadastro.html" class="btn-menu">Cadastro de Usuário</a></li>
+                <li><a href="#" id="btnLogout" class="btn-menu">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="titulo-secao">Quantidade disponível por produto</h2>
+        <section id="saldoEstoqueContainer">
+            <div class="tabela-wrapper">
+                <table id="tabelaSaldo">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Código de barras</th>
+                            <th>Local</th>
+                            <th>Saldo disponível</th>
+                            <th>Estoque mínimo</th>
+                            <th>Situação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabelaSaldo">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="overlayEdicao" class="overlay-edicao oculto">
+            <form id="formEdicao" class="modal-edicao">
+                <h3>Editar Produto</h3>
+                <input type="hidden" id="editCodigoBarras" name="codigoBarras" />
+
+                <div class="grupo-form">
+                    <label for="editNomeProduto">Nome</label>
+                    <input type="text" id="editNomeProduto" name="nomeProduto" required />
+                </div>
+                <div class="grupo-form">
+                    <label for="editFabricante">Fabricante</label>
+                    <input type="text" id="editFabricante" name="fabricante" />
+                </div>
+                <div class="grupo-form">
+                    <label for="editMarca">Marca</label>
+                    <input type="text" id="editMarca" name="marca" />
+                </div>
+                <div class="grupo-form">
+                    <label for="editLocalArmazenamento">Local de Armazenamento</label>
+                    <input type="text" id="editLocalArmazenamento" name="localArmazenamento" />
+                </div>
+                <div class="grupo-form">
+                    <label for="editEstoqueMinimo">Estoque Mínimo</label>
+                    <input type="number" id="editEstoqueMinimo" name="estoqueMinimo" min="0" />
+                </div>
+
+                <div class="acoes-form">
+                    <button type="submit" class="btn-menu">Salvar</button>
+                    <button type="button" id="btnCancelarEdicao">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="overlayAjuste" class="overlay-edicao oculto">
+            <form id="formAjuste" class="modal-edicao">
+                <h3>Ajustar Estoque</h3>
+                <p id="produtoAjusteNome" class="info-ajuste"></p>
+
+                <div class="grupo-form">
+                    <label for="ajusteTipo">Tipo de movimentação</label>
+                    <select id="ajusteTipo" name="tipo" required>
+                        <option value="entrada">Entrada (somar)</option>
+                        <option value="saida">Saída (subtrair)</option>
+                    </select>
+                </div>
+                <div class="grupo-form">
+                    <label for="ajusteQuantidade">Quantidade a movimentar</label>
+                    <input type="number" id="ajusteQuantidade" name="quantidade" min="1" required />
+                </div>
+
+                <div class="acoes-form">
+                    <button type="submit" class="btn-menu">Confirmar</button>
+                    <button type="button" id="btnCancelarAjuste">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/gerenciamento.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+
+</html>

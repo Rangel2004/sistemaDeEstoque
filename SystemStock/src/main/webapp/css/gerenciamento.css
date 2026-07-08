@@ -1,0 +1,102 @@
+#tabelaGerenciamento {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabelaGerenciamento th,
+#tabelaGerenciamento td {
+    padding: 12px;
+    text-align: center;
+}
+
+#tabelaGerenciamento th {
+    background-color: var(--primary-medium);
+    color: var(--white);
+    font-weight: bold;
+}
+
+#tabelaGerenciamento tr:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+.btn-editar,
+.btn-ajustar,
+.btn-excluir {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 13px;
+    margin: 0 3px;
+}
+
+.btn-editar {
+    background-color: var(--primary-medium);
+}
+
+.btn-editar:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-ajustar {
+    background-color: #1e8449;
+}
+
+.btn-ajustar:hover {
+    background-color: #145a32;
+}
+
+.info-ajuste {
+    margin-bottom: 15px;
+    color: var(--gray-medium);
+    font-size: 14px;
+}
+
+.btn-excluir {
+    background-color: #c0392b;
+}
+
+.btn-excluir:hover {
+    background-color: #922b21;
+}
+
+.overlay-edicao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.overlay-edicao.oculto {
+    display: none;
+}
+
+.modal-edicao {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-edicao h3 {
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+}
+
+#btnCancelarEdicao {
+    padding: 8px 16px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 6px;
+    background-color: var(--white);
+    cursor: pointer;
+}
